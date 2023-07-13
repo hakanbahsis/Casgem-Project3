@@ -1,0 +1,44 @@
+﻿@model List<CompanyInfo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+<h1>Bilgi Listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Telefon Numarası</th>
+        <th>Mail Adresi</th>
+        <th>Adres</th>
+        <th>Çalışma Günleri</th>
+        <th>Çalışma Saatleri</th>
+        <th>Harita Bilgisi</th>
+        
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Title</td>
+            <td>@item.Phone</td>
+            <td>@item.Mail</td>
+            <td>@item.Address</td>
+            <td>@item.OpenningDay</td>
+            <td>@item.OpenningHours</td>
+            <td>@item.MapInfo.Substring(0,50)</td>
+            <td><a href="/CompanyInfo/DeleteCompanyInfo/@item.CompanyInfoId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/CompanyInfo/UpdateCompanyInfo/@item.CompanyInfoId" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+@if (ViewBag.CountInfo==0)
+{
+    <td><a href="/CompanyInfo/AddCompanyInfo/" class="btn btn-success">Yeni Kategori Ekle</a></td>
+}
+
+

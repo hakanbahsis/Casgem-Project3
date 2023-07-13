@@ -1,0 +1,34 @@
+﻿@model List<Testimonial>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Referans Listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Referans Adı</th>
+        <th>Başlık</th>
+        <th>Yorum</th>
+        <th>Fotoğraf</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.CustomerName</td>
+            <td>@item.CustomerTitle</td>
+            <td>@item.Comment</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<td><a href="/Testimonial/AddTestimonial/" class="btn btn-success">Yeni Referans Ekle</a></td>
+
