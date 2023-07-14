@@ -21,7 +21,7 @@ namespace Pizzapan.WebUI.Controllers
 
         public IActionResult Index()
         {
-           var values= _productService.TGetAll();
+           var values= _productService.TGetProductsWithCategory();
             return View(values);
         }
 

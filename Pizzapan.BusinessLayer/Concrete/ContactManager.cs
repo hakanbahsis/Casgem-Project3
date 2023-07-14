@@ -33,6 +33,11 @@ namespace Pizzapan.BusinessLayer.Concrete
            return _contactDal.Get(id);
         }
 
+        public List<Contact> TGetContactBySubjectWithTesekkur()
+        {
+            return _contactDal.GetContactBySubjectWithTesekkur();
+        }
+
         public void TRemove(Contact entity)
         {
             _contactDal.Delete(entity);

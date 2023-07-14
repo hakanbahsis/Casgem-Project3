@@ -1,0 +1,53 @@
+﻿@model List<Discount>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Kupon Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kupon Adı</th>
+        <th>Kupon Açıklaması</th>
+        <th>Kupon Kodu</th>
+        <th>Kupon Sayısı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        if (@item.DiscountEndDate<DateTime.Now)
+        {
+            <tr class="text-danger">
+                <td>@count</td>
+                <td>@item.DiscountName</td>
+                <td>@item.DiscountDescription</td>
+                <td>@item.DiscountCoupon</td>
+                <td>@item.MaxCoupon</td>
+                <td>@(((DateTime)item.DiscountStartDate).ToString("dd-MMM-yyy"))</td>
+                <td>@(((DateTime)item.DiscountEndDate).ToString("dd-MMM-yyy"))</td>
+                <td><a href="/Discount/DeleteDiscount/@item.DiscountId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Discount/UpdateDiscount/@item.DiscountId" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }else
+        {
+            <tr class="text-success">
+                <td>@count</td>
+                <td>@item.DiscountName</td>
+                <td>@item.DiscountDescription</td>
+                <td>@item.DiscountCoupon</td>
+                <td>@item.MaxCoupon</td>
+                <td>@(((DateTime)item.DiscountStartDate).ToString("dd-MMM-yyy"))</td>
+                <td>@(((DateTime)item.DiscountEndDate).ToString("dd-MMM-yyy"))</td>
+                <td><a href="/Discount/DeleteDiscount/@item.DiscountId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Discount/UpdateDiscount/@item.DiscountId" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+        
+    }
+</table>
+<td><a href="/Discount/AddDiscount/" class="btn btn-success">Yeni Kupon Ekle</a></td>

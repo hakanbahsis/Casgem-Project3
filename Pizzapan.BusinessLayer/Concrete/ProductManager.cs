@@ -33,6 +33,11 @@ namespace Pizzapan.BusinessLayer.Concrete
             return _productDal.Get(id);
         }
 
+        public List<Product> TGetProductsWithCategory()
+        {
+           return _productDal.GetProductsWithCategory();
+        }
+
         public void TRemove(Product entity)
         {
            _productDal.Delete(entity);

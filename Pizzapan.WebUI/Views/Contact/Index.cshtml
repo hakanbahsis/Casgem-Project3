@@ -1,0 +1,64 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h1>Gelen Mesajlar</h1>
+<div class="div">
+<a href="/Contact/GetMessageByTesekkur/" class="btn btn-danger">Teşekkür Mesajları</a>
+</div>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Konu</th>
+        <th>Mail Adresi</th>
+        <th>Mesaj</th>
+        <th>Tarih</th>
+        <th>Detay</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.Email</td>
+            <td>@item.Message.Substring(0,80) ...</td>
+            <td>@(((DateTime)item.Date).ToString("dd-MMM-yyy"))</td>
+            <td>
+                <button type="button"  class="btn btn-dark" data-toggle="modal" data-target="#myModal">Mesajı Aç</button>
+               
+            </td>
+            <td><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-danger">Sil</a></td>
+        </tr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="exampleModalLabel">Gönderen : @item.Name -  @item.Email</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>@item.Message </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data data-data-id="">Kapat</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</table>
+

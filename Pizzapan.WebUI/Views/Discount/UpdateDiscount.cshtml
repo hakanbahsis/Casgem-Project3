@@ -1,0 +1,33 @@
+﻿@model Discount
+@{
+    ViewData["Title"] = "UpdateDiscount";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1> Kupon Güncelleme</h1>
+
+<form method="post">
+    @Html.HiddenFor(x=>x.DiscountId)
+    <div class="form-group mb-3">
+        <label>Kupon Adı</label>
+        <input type="text" asp-for="DiscountName" class="form-control" placeholder="Kupon Adı">
+    </div>
+    <div class="form-group mb-3">
+        <label>Kupon Açıklaması</label>
+        <input type="text" asp-for="DiscountDescription" class="form-control" placeholder="Kupon Açıklaması">
+    </div>
+    <div class="form-group mb-3">
+        <label>Kupon Kodu</label>
+        <input type="text" asp-for="DiscountCoupon"  class="form-control" readonly>
+    </div>
+    <div class="form-group mb-3">
+        <label>Kupon Sayısı</label>
+        <input type="number" asp-for="MaxCoupon" class="form-control">
+    </div>
+    <div class="form-group mb-3">
+        <label>Kupon Başlangıç Tarihi</label>
+        <input type="date" asp-for="DiscountStartDate" class="form-control">
+    </div>
+    <button class="btn btn-success">Kaydet</button>
+</form>
+

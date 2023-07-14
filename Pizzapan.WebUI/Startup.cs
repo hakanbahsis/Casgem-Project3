@@ -1,6 +1,9 @@
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +12,7 @@ using Pizzapan.BusinessLayer.Concrete;
 using Pizzapan.DataAccessLayer.Abstract;
 using Pizzapan.DataAccessLayer.Concrete;
 using Pizzapan.DataAccessLayer.EntityFramework;
+using Pizzapan.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +33,8 @@ namespace Pizzapan.WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PizzapanContext>();
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<PizzapanContext>();
+
             services.AddScoped<ICategoryService,CategoryManager>();
             services.AddScoped<ICategoryDal,EfCategoryDal>();
             
@@ -43,8 +49,45 @@ namespace Pizzapan.WebUI
             
             services.AddScoped<ICompanyInfoService,CompanyInfoManager>();
             services.AddScoped<ICompanyInfoDal,EfCompanyInfoDal>();
+            
+            services.AddScoped<IDiscountService,DiscountManager>();
+            services.AddScoped<IDiscountDal,EfDiscountDal>();
  
             services.AddControllersWithViews();
+            //authorization iþlemi
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+
+            });
+            services.AddMvc();
+
+
+            services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
+                {
+                    x.Cookie.Name = "ArtMvc.Auth";
+                    x.LoginPath = "/Login/Index/";
+                    x.LogoutPath = "/Login/Logout/";
+                    x.AccessDeniedPath = "/Login/Index/";
+                    //x.ExpireTimeSpan = TimeSpan.FromMinutes(1);
+                    //x.Cookie.HttpOnly = false;
+                    //x.SlidingExpiration = true;
+                });
+
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                //opt.Cookie.Name = "ArtMvc.Auth";
+                opt.LoginPath = "/Login/Index/";
+                opt.LogoutPath = "/Login/Logout/";
+                //opt.AccessDeniedPath = "/Login/Index/";
+                opt.Cookie.HttpOnly = false;
+                opt.SlidingExpiration = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +107,7 @@ namespace Pizzapan.WebUI
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -71,7 +115,7 @@ namespace Pizzapan.WebUI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Category}/{action=Index}/{id?}");
             });
         }
     }
