@@ -54,7 +54,8 @@ namespace Pizzapan.WebUI
             services.AddScoped<IDiscountDal,EfDiscountDal>();
  
             services.AddControllersWithViews();
-            //authorization iþlemi
+
+            //authorization işlemi
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -81,7 +82,6 @@ namespace Pizzapan.WebUI
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-                //opt.Cookie.Name = "ArtMvc.Auth";
                 opt.LoginPath = "/Login/Index/";
                 opt.LogoutPath = "/Login/Logout/";
                 //opt.AccessDeniedPath = "/Login/Index/";
