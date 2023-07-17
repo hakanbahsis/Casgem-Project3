@@ -23,7 +23,7 @@
                         <h3 class="text-primary">Kullanıcı Kayıt </h3>
                     </div>
                     <div class="p-4">
-                        <form method="post">
+                        <form method="post" asp-controller="Account" asp-action="Register">
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-primary">
                                     <i class="bi bi-person-plus-fill text-white"></i>
@@ -52,24 +52,25 @@
                                 <span class="input-group-text bg-primary">
                                     <i class="bi bi-key-fill text-white"></i>
                                 </span>
-                                <input type="password" class="form-control" asp-for="Password" id="exampleInputPassword1" placeholder="Şifreniz">
+                                <input type="password" class="form-control" asp-for="Password"  placeholder="Şifreniz">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text bg-primary">
                                     <i class="bi bi-key-fill text-white"></i>
                                 </span>
-                                <input type="password" class="form-control" asp-for="PasswordConfirm" id="exampleInputPassword1" placeholder="Şifreniz Tekrar">
+                                <input type="password" class="form-control" asp-for="PasswordConfirm"  placeholder="Şifreniz Tekrar">
                             </div>
                             <div class="d-grid col-12 mx-auto">
                                 <button class="btn btn-primary" type="button"><span></span> Kaydet</button>
                             </div>
-                         
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </body>
 </html>
 

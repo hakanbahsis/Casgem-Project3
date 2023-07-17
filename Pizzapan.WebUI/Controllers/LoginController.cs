@@ -12,8 +12,7 @@ using System;
 
 namespace Pizzapan.WebUI.Controllers
 {
-    [AllowAnonymous]
-    [Authorize]
+  
     public class LoginController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;
@@ -31,37 +30,50 @@ namespace Pizzapan.WebUI.Controllers
         }
 
 
+        #region eski
+        //[HttpPost]
+        //public async Task<IActionResult> Index(LoginViewModel login)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+
+        //        var result = await _signInManager.PasswordSignInAsync(login.Username, login.Password, true, true);
+        //        if (result.Succeeded)
+        //        {
+        //            var claims = new List<Claim>
+        //            {
+        //                new Claim(ClaimTypes.Name,login.Username)
+        //            };
+
+        //            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        //            var authProperties = new AuthenticationProperties()
+        //            {
+        //                IsPersistent = true,
+        //                ExpiresUtc = DateTime.UtcNow.AddMinutes(1)
+        //            };
+        //            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new System.Security.Claims.ClaimsPrincipal(claimsIdentity), authProperties);
+
+        //            return RedirectToAction("Index", "Category");
+        //        }
+        //        else
+        //        {
+        //            return RedirectToAction("Index", "Login");
+        //        }
+        //    }
+
+        //    return View();
+        //}
+        #endregion
+
 
         [HttpPost]
-        public async Task<IActionResult> Index(LoginViewModel login)
+        public async Task<IActionResult> Index(LoginViewModel model)
         {
-            if (ModelState.IsValid)
+            var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, true, true);
+            if (result.Succeeded)
             {
-
-                var result = await _signInManager.PasswordSignInAsync(login.Username, login.Password, false, true);
-                if (result.Succeeded)
-                {
-                    var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Name,login.Username)
-                    };
-
-                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    var authProperties = new AuthenticationProperties()
-                    {
-                        IsPersistent = true,
-                        ExpiresUtc = DateTime.UtcNow.AddMinutes(1)
-                    };
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new System.Security.Claims.ClaimsPrincipal(claimsIdentity), authProperties);
-
-                    return RedirectToAction("Index", "Category");
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Login");
-                }
+                return RedirectToAction("Index", "Category");
             }
-
             return View();
         }
 

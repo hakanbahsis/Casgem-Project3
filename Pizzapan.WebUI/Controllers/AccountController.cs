@@ -61,7 +61,7 @@ namespace Pizzapan.WebUI.Controllers
                     }
                 }
             }
-            return View(register);
+            return View();
         }
 
       

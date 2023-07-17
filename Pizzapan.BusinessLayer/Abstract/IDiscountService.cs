@@ -9,5 +9,6 @@ namespace Pizzapan.BusinessLayer.Abstract
 {
     public interface IDiscountService:IGenericService<Discount>
     {
+        string CreateDiscountCouponCode(string coupon);
     }
 }

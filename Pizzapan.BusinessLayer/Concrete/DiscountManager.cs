@@ -18,6 +18,27 @@ namespace Pizzapan.BusinessLayer.Concrete
             _discountDal = discountDal;
         }
 
+        public string CreateDiscountCouponCode(string coupon)
+        {
+            Random rnd = new Random();
+            char[] harf = new char[4]; ;
+            string cc = "";
+            string rr = "";
+            for (int i = 0; i < 4; i++)
+            {
+                int kod = rnd.Next(65, 91);
+                harf[i] += Convert.ToChar(kod);
+                cc += harf[i].ToString();
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                int a = rnd.Next(0, 9);
+                rr += a;
+            }
+            coupon = cc + rr.ToString();
+            return coupon;
+        }
+
         public void TAdd(Discount entity)
         {
             _discountDal.Add(entity);
