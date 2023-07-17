@@ -28,6 +28,7 @@ namespace Pizzapan.WebUI.Controllers
             model.Username= value.UserName;
             return View(model);
         }
+
         [HttpPost]
         public async Task<IActionResult> Index(UserEditViewModel value)
         {

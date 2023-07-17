@@ -185,6 +185,16 @@ C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\M
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\MimeKit.dll
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\NETCore.MailKit.dll
-C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\SendMail\Index.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Register\ConfirmCode.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\BouncyCastle.Cryptography.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\System.Formats.Asn1.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\System.Text.Encoding.CodePages.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\ProductImage\AddProductImages.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Default\Index.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_HeadPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_HeaderPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ModalPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_DomainPartial\Default.cshtml.g.cs

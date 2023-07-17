@@ -1,0 +1,21 @@
+﻿@model UserConfirmCodeViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<form method="post">
+    <div class="container">
+        <br>
+        <h2>Mail Adresi: @ViewBag.Mail</h2>
+        <br />
+        <label>Kullanıcı Mail</label>
+        <input type="text" class="form-control" asp-for="Mail" readonly value="@ViewBag.Mail" />
+        <br />
+        <label>Doğrulama Kodu</label>
+        <input type="number" class="form-control" asp-for="ConfirmCode" />
+        <br />
+        <button class="btn btn-primary">Giriş</button>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    </div>
+</form>

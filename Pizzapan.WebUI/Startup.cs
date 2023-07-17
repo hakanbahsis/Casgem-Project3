@@ -53,6 +53,11 @@ namespace Pizzapan.WebUI
             
             services.AddScoped<IDiscountService,DiscountManager>();
             services.AddScoped<IDiscountDal,EfDiscountDal>();
+            
+            services.AddScoped<IProductImageService,ProductImageManager>();
+            services.AddScoped<IProductImageDal,EfProductImageDal>();
+
+            services.AddScoped<IRegisterService,RegisterManager>();
  
             services.AddControllersWithViews();
 
