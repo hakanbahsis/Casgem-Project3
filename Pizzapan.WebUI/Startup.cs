@@ -57,6 +57,9 @@ namespace Pizzapan.WebUI
             services.AddScoped<IProductImageService,ProductImageManager>();
             services.AddScoped<IProductImageDal,EfProductImageDal>();
 
+            services.AddScoped<IOurTeamService,OurTeamManager>();
+            services.AddScoped<IOurTeamDal,EfOurTeamDal>();
+
             services.AddScoped<IRegisterService,RegisterManager>();
  
             services.AddControllersWithViews();

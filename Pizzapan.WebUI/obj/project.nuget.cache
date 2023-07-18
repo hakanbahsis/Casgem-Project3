@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oWjkfE++C6n45ZRChGoxUX6LAAuA7LK9q829KqNVza+xn3eoc07sw/sKoeKJtDVJSkDgaymzni2xi8vSD6VsuQ==",
+  "dgSpecHash": "wtU7XUmHihHvMwYfFaRU8cCc+wPnjRsszv9nL0r2eac9iH3DVdD6zlopo/R0mV5LYRjgs6NGftrBqjPjswQh3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\CasgemCoreProject\\Pizzapan.WebUI\\Pizzapan.WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

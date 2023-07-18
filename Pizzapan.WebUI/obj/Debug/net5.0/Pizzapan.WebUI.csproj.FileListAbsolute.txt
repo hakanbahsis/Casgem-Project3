@@ -198,3 +198,15 @@ C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\R
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_HeaderPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ModalPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_DomainPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_AboutPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_BlockPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_PortfolioPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_FoodPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_TestimonialsPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_FooterPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ScriptsPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Pizzapan.WebUI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\OurTeam\AddOurTeam.cshtml.g.cs
