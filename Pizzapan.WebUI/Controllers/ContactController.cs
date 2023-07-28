@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pizzapan.BusinessLayer.Abstract;
 using Pizzapan.EntityLayer.Concrete;
+using System;
 
 namespace Pizzapan.WebUI.Controllers
 {
@@ -46,8 +47,9 @@ namespace Pizzapan.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
+                contact.Date = DateTime.Now;
                 _contactService.TAdd(contact);
-                return RedirectToAction("Index");
+                return RedirectToAction("Contact","Default");
             }
             return View();
         }

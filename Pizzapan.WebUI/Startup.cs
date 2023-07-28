@@ -59,6 +59,9 @@ namespace Pizzapan.WebUI
 
             services.AddScoped<IOurTeamService,OurTeamManager>();
             services.AddScoped<IOurTeamDal,EfOurTeamDal>();
+            
+            services.AddScoped<IAboutService,AboutManager>();
+            services.AddScoped<IAboutDal,EfAboutDal>();
 
             services.AddScoped<IRegisterService,RegisterManager>();
  

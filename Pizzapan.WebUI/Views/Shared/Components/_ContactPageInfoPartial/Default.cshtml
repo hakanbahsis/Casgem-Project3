@@ -1,0 +1,71 @@
+﻿
+<section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+        <div class="contant11-top-bg">
+            <div class="container">
+                @foreach (var item in ViewBag.Company)
+                {
+                    
+                
+                <div class="title-content text-center">
+                    <h6 class="sub-title">İletişim</h6>
+                    <h3 class="title-big">İstediğiniz zaman bizimle iletişime geçebilirsiniz</h3>
+                </div>
+                <div class="d-grid contact section-gap mt-lg-5 mt-4">
+                    <div class="contact-info-left d-grid text-center">
+                        <div class="contact-info">
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <h4>Adres</h4>
+                            <p>@item.Address</p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <h4>İletişim</h4>
+                            <p><a href="tel:@item.Phone">@item.Phone</a></p>
+                            <p><a href="mailto: @item.Mail" class="email">@item.Mail</a></p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-clock-o" aria-hidden="true"></span>
+                            <h4>Çalışma Saatlerimiz</h4>
+                                <p>@item.OpenningDay</p>
+                                <p> @item.OpenningHours</p>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="form-41-mian section-gap mt-5">
+            <div class="container">
+                <div class="d-grid align-form-map">
+                    <div class="form-inner-cont">
+                        <form method="post" class="signin-form" asp-action="SendMessage" asp-controller="Contact">
+                            <div class="form-input">
+                                <label for="w3lName">Ad Soyad</label>
+                                <input type="text" name="Name" id="w3lName" placeholder="" />
+                            </div>
+                            <div class="form-input">
+                                <label for="w3lSender">Email</label>
+                                <input type="email" name="Email" id="w3lSender" placeholder="" required="" />
+                            </div>
+                            <div class="form-input">
+                                <label >Konu</label>
+                                <input type="text" name="Subject" id="w3lSender" placeholder="" required="" />
+                            </div>
+                            <div class="form-input">
+                                <label for="w3lMessage">Mesaj</label>
+                                <textarea placeholder="" name="Message" id="w3lMessage" required=""></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-style btn-primary">Gönder</button>
+
+                        </form>
+                    </div>
+                    <div class="map">
+                        <iframe src="@ViewBag.Map"
+                                frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

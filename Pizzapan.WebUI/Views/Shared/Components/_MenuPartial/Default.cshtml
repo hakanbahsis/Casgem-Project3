@@ -1,0 +1,49 @@
+﻿@model List<Category>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="agileits-services  py-5" id="menu">
+    <div class="container py-md-5">
+        <div class="title-content text-center">
+            <h6 class="sub-title">Menülerimiz</h6>
+            <h3 class="title-big">Sizin için özel seçilmiş menüler</h3>
+        </div>
+        <div class="pt-lg-5 pt-4">
+            <div class="row menu-body">
+                <!-- Section starts: Appetizers -->
+                @foreach (var item in Model)
+                {
+
+
+                    <div class="col-lg-6 menu-section pr-lg-5">
+
+                        <h3 class="menu-section-title">@item.Name</h3>
+                        <!-- Item starts -->
+                        <div class="menu-item">
+                            @foreach (var product in item.Products)
+                            {
+                                <div class="row border-dot no-gutters">
+                                    <div class="col-8 menu-item-name">
+                                        <h6>@product.Name</h6>
+                                    </div>
+                                    <div class="col-4 menu-item-price text-right">
+                                        <h6>@product.Price ₺</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-item-description">
+                                    <p>@product.Description</p>
+                                </div>
+                            }
+
+                        </div>
+
+                    </div>
+                }
+
+                   
+                </div>
+                <!-- Section ends: Drinks -->
+            </div>
+        </div>
+    </div>
+</div>

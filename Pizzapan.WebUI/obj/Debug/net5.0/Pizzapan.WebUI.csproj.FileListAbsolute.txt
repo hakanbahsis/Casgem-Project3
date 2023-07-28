@@ -199,7 +199,6 @@ C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\R
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ModalPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_DomainPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_AboutPartial\Default.cshtml.g.cs
-C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_BlockPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_PortfolioPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_FoodPartial\Default.cshtml.g.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_TestimonialsPartial\Default.cshtml.g.cs
@@ -210,3 +209,14 @@ C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\F
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Pizzapan.WebUI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\OurTeam\AddOurTeam.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Default\About.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\About\AddAbout.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\About\UpdateAbout.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_AboutPageAboutPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_AboutPageCategoryPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_AboutPageOurTeamPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Default\Menu.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_MenuPartial\Default.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Default\Contact.cshtml.g.cs
+C:\Users\Lenovo\source\repos\CasgemCoreProject\Pizzapan.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Components\_ContactPageInfoPartial\Default.cshtml.g.cs

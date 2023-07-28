@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @await Component.InvokeAsync("_HeadPartial")
+</head>
+<body>
+    @await Component.InvokeAsync("_HeaderPartial")
+    @await Component.InvokeAsync("_ModalPartial")
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/Default/Index">Anasayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Menü</li>
+            </ul>
+        </div>
+    </section>
+    @await Component.InvokeAsync("_MenuPartial")
+    @await Component.InvokeAsync("_FooterPartial")
+    @await Component.InvokeAsync("_ScriptsPartial")
+</body>
+</html>
